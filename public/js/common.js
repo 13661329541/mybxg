@@ -1,4 +1,4 @@
-define(['jquery', 'cookie'], function($) {
+define(['jquery', 'nprogress', 'cookie'], function($,nprogress) {
     // 登录进来上面的蓝色条框显示
     $('.navs ul').prev('a').on('click', function() {
         $(this).next().slideToggle();
@@ -29,8 +29,19 @@ define(['jquery', 'cookie'], function($) {
         var str =
             $('.aside .profile').find('h4').html(objCookie.tc_name);
         $('.aside .profile').find('img').attr('src', objCookie.tc_avatar);
-
-
     }
+
+        // 遮罩显示 公共的属性
+    $(document).ajaxStart(function(){
+        $('.overlay').show();
+    });
+
+     $(document).ajaxStop(function(){
+        $('.overlay').hide();
+    });
+
+    // 进度条显示
+    nprogress.start();
+    nprogress.done();
 
 });
