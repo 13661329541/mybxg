@@ -75,7 +75,7 @@
         </div>
     </div>
      <?php include('view/common/script.html'); ?>
-     <!--获取查看的之后模态框的摸版-->
+     <!--获取查看的之后模态框的摸版 需要添加数据-->
       <script type='text/template' id="teacherModalID">
              <table class="table table-bordered table-condensed">
                         <tbody>
@@ -133,7 +133,7 @@
                   </td>
                  <td>{{$value.tc_cellphone}}</td>
                   <td data-id='{{$value.tc_id}}'>
-                     <a href="jsvascript:;" data-toggle="modal" class="btn btn-info btn-xs a1Info">查 看</a>
+                     <a data-toggle="modal" class="btn btn-info btn-xs a1Info">查 看</a>
                      <a href="jsvascript:;" class="btn btn-info btn-xs a2">编 辑</a>
                      <a href="jsvascript:;" class="btn btn-warning btn-xs a3">注 销</a>
                      </td>
